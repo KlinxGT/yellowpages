@@ -1,0 +1,19 @@
+
+#toggle {
+    left: 5px;
+    background: #5d878c;
+    width: fit-content;
+    padding: 1px 3px;
+    margin-bottom: 2px;
+  }
+  
+#toggle div {
+    width: 25px;
+    height: 2px;
+    background: white;
+    margin: 6px 0;
+}
+
+.hide-small {
+    display: none;
+  }
