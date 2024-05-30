@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/yellowpages/static/css/main.5044de9e.css",
+    "main.js": "/yellowpages/static/js/main.c8ce580e.js",
+    "index.html": "/yellowpages/index.html",
+    "main.5044de9e.css.map": "/yellowpages/static/css/main.5044de9e.css.map",
+    "main.c8ce580e.js.map": "/yellowpages/static/js/main.c8ce580e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5044de9e.css",
+    "static/js/main.c8ce580e.js"
+  ]
+}
