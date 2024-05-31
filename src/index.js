@@ -10,8 +10,6 @@ import Post from "./pages/post";
 import About from "./pages/about";
 import Vote from "./pages/vote";
 
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter basename = {process.env.PUBLIC_URL}>

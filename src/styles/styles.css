@@ -1,0 +1,14 @@
+:root{
+    --nav-color:#efd8b7;
+    --nav-bar:#57300F;
+    --support-color: rgb(255, 240, 222);
+    --chocolate:#443325 ;
+}
+
+body {
+    width: 85%;
+    margin: 10px auto;
+    min-height: fit-content;
+    color:var(--chocolate);
+    background-color: var(--nav-color);
+}
