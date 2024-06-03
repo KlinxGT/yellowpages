@@ -1,5 +1,3 @@
-import './styles/header.css';
-
 const Header = () => {
     return (
         <header id="main-header">
@@ -8,4 +6,4 @@ const Header = () => {
     );
 };
 
-export default header;
+export default Header;

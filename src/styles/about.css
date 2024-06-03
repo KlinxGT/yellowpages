@@ -1,0 +1,58 @@
+p {
+    margin: 10px 5px;
+    font-size: medium;
+}
+
+#me img {
+    border-style: solid;
+}
+/*Contact Form*/
+#contact {
+    justify-content: space-evenly;
+    background-color: var(--chocolate);
+    color: var(--support-color);
+
+}
+
+#contact input, #contact textarea{
+    width: 100%;
+}
+
+#contact p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    margin: auto;
+    padding:5px;
+}
+
+#contact button {
+    width: 50%;
+}
+
+iframe {
+    width: 98%;
+    margin: 5px auto;
+    height: 300px;
+}
+
+/*Larger Resolution*/
+@media only screen and (min-width: 900px) {
+    #me {
+        float: left;
+    }
+
+    #me img {
+        margin-right: 15px ;
+    }
+    #about p {
+        font-size: larger;
+        text-align: left;
+    }
+
+    #fields {
+        display: flex;
+    }    
+
+}

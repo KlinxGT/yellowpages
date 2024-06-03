@@ -1,6 +1,8 @@
 #banner {
     display: flex;
     padding:25px 0px;
+    width: 95%;
+    margin: auto;
 } 
 
 #banner h1 {
@@ -21,4 +23,79 @@
 #search {
     height: 20px;
     width: 30%;
+}
+
+
+.colum {
+    width: 90%;
+    margin: auto;
+}
+
+.post {
+    max-width: 100%;
+    width: 98%;
+    border-style: solid;
+    margin: 2px 2px;
+}
+
+.postImg {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.more {
+    width: 90%;
+    margin: 5px auto;
+    height: fit-content;
+}
+
+.like-count {
+    display: flex;
+    width: 50%;
+    margin: 5px auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.likes, .dislikes, .like-count h2 {
+    flex: 1;
+    margin: 0;
+}
+
+
+.likes, .dislikes {
+    background-color: var(--chocolate);
+    color: var(--support-color);
+}
+
+@media only screen and (min-width: 800px) {
+
+    #images {
+        display: flex;
+        flex-wrap: wrap;
+        width: 92%;
+        margin: auto;
+    }
+
+    .colum {
+        flex:45%;
+        max-width: 50%;
+        margin: 0px 2px;
+        margin-bottom: 2px;
+        height: fit-content;
+    }
+
+    .post {
+        height: fit-content;
+        margin-bottom: 5px;
+        border-style: solid;
+    }
+}
+
+
+@media only screen and (min-width:950px) {
+    .colum {
+        flex:22%;
+    }
 }

@@ -1,0 +1,53 @@
+#content {
+    text-align: center;
+    min-height: fit-content;   
+}
+
+#palace {
+    width: 85%;
+    margin: 10px auto;
+}
+
+.famers {
+    border-style: solid;
+    width: fit-content;
+    margin: 5px auto;
+    height: fit-content;
+}
+
+.famers img {
+    border-style: dotted;
+    max-width: 98%;
+}
+
+
+/*Larger Resolution*/
+@media only screen and (min-width: 800px) {
+
+    #hall {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .famers {
+        width: fit-content;
+    
+    }
+    #content {
+        flex: 5;
+    }
+    
+    #contest {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+
+    .choice {
+        width: min-content;
+        margin: 5px auto;
+    }
+    
+}

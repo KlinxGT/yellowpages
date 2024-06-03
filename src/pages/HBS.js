@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
-import "../styles/HBS.css"
+import "../styles/HBS.css";
+import myData from "../JSON/jason.json";
 
 const HBS = () => {
 
     useEffect(() => {
         document.title = 'Home';
     }, []);
+
     //Gets JSON
     const getPost = async() => {
         try {
-            return((await fetch("https://klinxgt.github.io/CSCE242Summer/Projects/Part5/HBS/jason.json")).json());
+            return(myData);
         }
         catch (error) {
             console.log(error);
@@ -35,7 +37,9 @@ const HBS = () => {
         }
     
         return theOne;
-    }   
+    } 
+    
+
     //Posts pages
     const postPage = async() => {
         const posts = await getPost();
@@ -44,7 +48,7 @@ const HBS = () => {
             sec.classList.add("post");
     
             const img = document.createElement("img");
-            img.src = post.image;
+            img.src = require(`../${post.image}`);
             img.classList.add("postImg");
             sec.append(img);
             
@@ -58,15 +62,21 @@ const HBS = () => {
             const likes = document.createElement("button");
             likes.classList.add("likes");
             likes.innerText = "Like";
+            likes.onclick = () => {
+                count.textContent = ++count.textContent;
+            };
             likeSec.append(likes);
-    
+          
             const count = document.createElement("h2");
-            count.textContent = "0";
+            count.textContent = 0;
             likeSec.append(count);
     
             const dislikes = document.createElement("button");
             dislikes.classList.add("dislikes");
             dislikes.innerHTML = "Dislike";
+            dislikes.onclick = () => {
+                count.textContent = --count.textContent;
+            };
             likeSec.append(dislikes);
     
             sec.append(likeSec);
@@ -76,7 +86,7 @@ const HBS = () => {
             col.append(sec);
         });
     }
-
+    
     postPage();
     return(
         <div id = "content">

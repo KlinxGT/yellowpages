@@ -1,0 +1,125 @@
+#form {
+    height: fit-content;
+}
+
+#form h1 {
+    text-align: center;
+}
+
+#pic {
+    background-color: var(--chocolate);
+    color: var(--support-color);
+    width: 100%;
+}
+
+#img {
+    min-height: 200px;
+    height: fit-content;
+    border: solid;
+    width: fit-content;
+    margin:auto;
+    background-color: var(--chocolate);
+}
+
+#img img {
+    max-width: 100%;
+}
+
+#img h2 {
+    margin: 50px;
+    text-align: center;
+}
+
+#more {
+    width: 90%;
+    margin: 5px auto;
+    height: fit-content;
+    min-height: 32vh;
+    background-color: #443325;
+    color: var(--support-color) ;
+    padding-bottom: 5px;
+
+}
+
+#more section {
+    flex:1;
+    padding:5px;
+    margin: auto;
+}
+
+#more label {
+    font-size: large;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+}
+
+#description, #tags {
+    height: 35%;
+    width: 80%;
+    background-color: var(--support-color);
+    border-style: groove;
+}
+
+#caption {
+    height: 80px;
+    width: 80%;
+    background-color: var(--support-color);
+}
+
+#description, #tags {
+    min-height: 50px;
+    height: 30%;
+}
+
+#more p {
+    text-align: center;
+}
+
+#list {
+    width:90%;
+    margin: auto;
+    border-style: solid;
+    height: fit-content;
+    background-color: var(--chocolate);
+}
+
+.post {
+    margin: 5px;
+    flex:40%;
+}
+
+#poster {
+    width:90%;
+    height: 40px;
+    display: block;
+    margin: 5px auto;
+    background-color: var(--nav-bar);
+    color: var(--nav-color);
+}
+
+@media only screen and (min-width:800px) {
+    #img {
+        max-width: 80%;
+    }
+
+    #img img{
+        max-width: 100%;
+    }
+    
+    #more {
+        display: flex;
+    }
+
+    #more p{
+        flex: 1;
+    }
+    #hamburger {
+        display: none;
+    }
+
+    #caption {
+        height: 80%;
+    }
+  
+}

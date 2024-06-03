@@ -1,0 +1,32 @@
+#main{
+    width: 90%;
+    margin: auto;
+}
+
+.choice {
+    border-style: solid;
+    padding:5px;
+    margin: 5px;
+    height: fit-content;
+}
+
+.choice img {
+    border-style: groove;
+}
+
+.choice button {
+    background-color: var(--chocolate);
+    color:var(--support-color);
+}
+.gold {
+    background-color: gold;
+}
+
+.silver {
+    background-color: silver;
+}
+
+.bronze {
+    background-color:saddlebrown;
+}
+
