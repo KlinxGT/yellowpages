@@ -1,26 +1,22 @@
 {
   "files": {
-    "main.css": "/yellowpages/static/css/main.8c078d8a.css",
-    "main.js": "/yellowpages/static/js/main.6fb1fba4.js",
+    "main.css": "/yellowpages/static/css/main.81fcd877.css",
+    "main.js": "/yellowpages/static/js/main.6e332361.js",
     "static/media/angel.jpg": "/yellowpages/static/media/angel.ded2030f0f96ae5dd125.jpg",
     "static/media/trustfund.jpg": "/yellowpages/static/media/trustfund.f7255f8c3dd01f908a57.jpg",
     "static/media/book.jpg": "/yellowpages/static/media/book.9603801d2891c882aaa2.jpg",
     "static/media/abook.jpg": "/yellowpages/static/media/abook.ffaedd01fde73b8246af.jpg",
     "static/media/couple.jpg": "/yellowpages/static/media/couple.f315b9022984c2412ba5.jpg",
     "static/media/manbun.jpg": "/yellowpages/static/media/manbun.b11b3a57887b280e2c8c.jpg",
-    "static/media/stones.jpg": "/yellowpages/static/media/stones.01651cc0e4bd99912ff9.jpg",
-    "static/media/morecoffee.jpg": "/yellowpages/static/media/morecoffee.8cf42bfc220826cc588d.jpg",
     "static/media/coffee.jpg": "/yellowpages/static/media/coffee.82344dcae72c69492190.jpg",
-    "static/media/statue.jpg": "/yellowpages/static/media/statue.01467148e6145527ce33.jpg",
     "static/media/dreams.jpg": "/yellowpages/static/media/dreams.da650233e777375fef48.jpg",
-    "static/media/logo copy.png": "/yellowpages/static/media/logo copy.afaf2f4f6be219c3d806.png",
     "static/media/logo.png": "/yellowpages/static/media/logo.afaf2f4f6be219c3d806.png",
     "index.html": "/yellowpages/index.html",
-    "main.8c078d8a.css.map": "/yellowpages/static/css/main.8c078d8a.css.map",
-    "main.6fb1fba4.js.map": "/yellowpages/static/js/main.6fb1fba4.js.map"
+    "main.81fcd877.css.map": "/yellowpages/static/css/main.81fcd877.css.map",
+    "main.6e332361.js.map": "/yellowpages/static/js/main.6e332361.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c078d8a.css",
-    "static/js/main.6fb1fba4.js"
+    "static/css/main.81fcd877.css",
+    "static/js/main.6e332361.js"
   ]
 }
