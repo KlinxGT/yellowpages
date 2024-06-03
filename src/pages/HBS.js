@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../styles/HBS.css";
-import myData from "../JSON/jason.json";
+//import myData from "../JSON/jason.json";
+import axios from 'axios';
 
 const HBS = () => {
 
@@ -9,6 +10,7 @@ const HBS = () => {
     }, []);
 
     //Gets JSON
+    /*
     const getPost = async() => {
         try {
             return(myData);
@@ -17,6 +19,18 @@ const HBS = () => {
             console.log(error);
         }
     }
+    */ 
+
+    const [posts, setPosts] = useState([]);
+    useEffect(() => {
+        (async () => {
+          const response = await axios.get(
+            "https://yellowpages-backend.onrender.com/api/posts"
+          );
+          setPosts(response.data);
+        })();
+      }, []);
+
     //Gets shortest colum
     const getColum = () => {
         const col1 = document.getElementById("col1");
@@ -42,13 +56,13 @@ const HBS = () => {
 
     //Posts pages
     const postPage = async() => {
-        const posts = await getPost();
+        
         posts.forEach(async (post) => {
             const sec = document.createElement("section");
             sec.classList.add("post");
     
             const img = document.createElement("img");
-            img.src = require(`../${post.image}`);
+            img.src = (`https://yellowpages-backend.onrender.com/${post.image}`);
             img.classList.add("postImg");
             sec.append(img);
             
