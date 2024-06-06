@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/yellowpages/static/css/main.81fcd877.css",
-    "main.js": "/yellowpages/static/js/main.6e332361.js",
+    "main.css": "/yellowpages/static/css/main.b911cd4e.css",
+    "main.js": "/yellowpages/static/js/main.0ae087e4.js",
     "static/media/angel.jpg": "/yellowpages/static/media/angel.ded2030f0f96ae5dd125.jpg",
     "static/media/trustfund.jpg": "/yellowpages/static/media/trustfund.f7255f8c3dd01f908a57.jpg",
     "static/media/book.jpg": "/yellowpages/static/media/book.9603801d2891c882aaa2.jpg",
@@ -12,11 +12,11 @@
     "static/media/dreams.jpg": "/yellowpages/static/media/dreams.da650233e777375fef48.jpg",
     "static/media/logo.png": "/yellowpages/static/media/logo.afaf2f4f6be219c3d806.png",
     "index.html": "/yellowpages/index.html",
-    "main.81fcd877.css.map": "/yellowpages/static/css/main.81fcd877.css.map",
-    "main.6e332361.js.map": "/yellowpages/static/js/main.6e332361.js.map"
+    "main.b911cd4e.css.map": "/yellowpages/static/css/main.b911cd4e.css.map",
+    "main.0ae087e4.js.map": "/yellowpages/static/js/main.0ae087e4.js.map"
   },
   "entrypoints": [
-    "static/css/main.81fcd877.css",
-    "static/js/main.6e332361.js"
+    "static/css/main.b911cd4e.css",
+    "static/js/main.0ae087e4.js"
   ]
 }
