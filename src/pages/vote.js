@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../styles/vote.css";
 
 const Vote = () => {
@@ -6,13 +6,31 @@ const Vote = () => {
         document.title = 'Vote';
     }, []);
 
+    const [medals, setMedals] = useState([2,3,1]);
+    
+    const largestMedal = () => {
+    
+        for(let i = 0; i<medals.length-1; i++){
+            if(medals[i] < medals[i+1]) {
+                const temp = medals[i+1];
+                medals[i+1] = medals[i];
+                medals[i] = temp; 
+            } 
+        };
+        return medals.pop();
+    }
+
+    const remove = () => {
+        
+    }
+
     return (
         <div id = "content">
             <section id = "main">
                 <h1>Vote!</h1>
                 <p>Vote for this month's "Worst Amateur" photograph to be exiled from the archive and banished into the Hall of Fame!</p>
                 <section id = "contest">
-                    <section className = "choice gold" id = "cont1" >
+                    <section className = "choice" id = "contA" >
                         <img src = {require("../images/abook.jpg")} alt ="Book" />
                         <section className = "info">
                             <section>
@@ -33,7 +51,7 @@ const Vote = () => {
                         </section>
                         <button>Remove</button>
                     </section>
-                    <section className = "choice silver" id = "cont2" >
+                    <section className = "choice" id = "contB" >
                         <img src = {require("../images/manbun.jpg")} alt = "Manbun"/>
                         <section className = "info">
                             <section>
@@ -49,7 +67,7 @@ const Vote = () => {
                         </section>
                         <button>Remove</button>
                     </section>
-                    <section className = "choice bronze" id = "cont3">
+                    <section className = "choice" id = "contC">
                         <img src = {require("../images/trustfund.jpg")} alt = "hippies"/>
                         <section className = "info">
                             <section>

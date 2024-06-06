@@ -18,15 +18,15 @@
     background-color: var(--chocolate);
     color:var(--support-color);
 }
-.gold {
+.place1 {
     background-color: gold;
 }
 
-.silver {
+.place2 {
     background-color: silver;
 }
 
-.bronze {
+.place3 {
     background-color:saddlebrown;
 }
 

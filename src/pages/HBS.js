@@ -2,12 +2,9 @@ import React, { useEffect, useState } from 'react';
 import "../styles/HBS.css";
 //import myData from "../JSON/jason.json";
 import axios from 'axios';
+import Posting from "../components/posting";
 
 const HBS = () => {
-
-    useEffect(() => {
-        document.title = 'Home';
-    }, []);
 
     //Gets JSON
     /*
@@ -23,6 +20,7 @@ const HBS = () => {
 
     const [posts, setPosts] = useState([]);
     useEffect(() => {
+        document.title = 'Home';
         (async () => {
           const response = await axios.get(
             "https://yellowpages-backend.onrender.com/api/posts"
@@ -31,77 +29,6 @@ const HBS = () => {
         })();
       }, []);
 
-    //Gets shortest colum
-    const getColum = () => {
-        const col1 = document.getElementById("col1");
-        const col2 = document.getElementById("col2");
-        const col3 = document.getElementById("col3");
-        const col0 = document.getElementById("col0");
-    
-        let theOne = col1;
-        
-        if(theOne.offsetHeight > col2.offsetHeight) {
-            theOne = col2;
-        }
-        if(theOne.offsetHeight > col3.offsetHeight) {
-            theOne = col3;
-        }
-        if(theOne.offsetHeight > col0.offsetHeight) {
-            theOne = col0;
-        }
-    
-        return theOne;
-    } 
-    
-
-    //Posts pages
-    const postPage = async() => {
-        
-        posts.forEach(async (post) => {
-            const sec = document.createElement("section");
-            sec.classList.add("post");
-    
-            const img = document.createElement("img");
-            img.src = (`https://yellowpages-backend.onrender.com/${post.image}`);
-            img.classList.add("postImg");
-            sec.append(img);
-            
-            const cap = document.createElement("p");
-            cap.textContent = post.caption;
-            sec.append(cap);
-    
-            const likeSec = document.createElement("section");
-            likeSec.classList.add("like-count");
-    
-            const likes = document.createElement("button");
-            likes.classList.add("likes");
-            likes.innerText = "Like";
-            likes.onclick = () => {
-                count.textContent = ++count.textContent;
-            };
-            likeSec.append(likes);
-          
-            const count = document.createElement("h2");
-            count.textContent = 0;
-            likeSec.append(count);
-    
-            const dislikes = document.createElement("button");
-            dislikes.classList.add("dislikes");
-            dislikes.innerHTML = "Dislike";
-            dislikes.onclick = () => {
-                count.textContent = --count.textContent;
-            };
-            likeSec.append(dislikes);
-    
-            sec.append(likeSec);
-            
-    
-            const col = getColum();
-            col.append(sec);
-        });
-    }
-    
-    postPage();
     return(
         <div id = "content">
             <section id = "banner">
@@ -110,18 +37,50 @@ const HBS = () => {
                 <input id = "search" type = "text"></input>
             </section>
             <section id = "images">
+                <dialog id="edit" open>
+                    <form method = "dialog" id = "editor"> 
+                        <img id = "emage"/>
+                        <button>Heyoo</button>
+                    </form>
+                </dialog>
+               
                 <section id = "col1" className = "colum">
-
+                    {posts.map((post, id)=>(<>{id%4 === 0 ? (
+                    <Posting key={post._id}
+                            _id={post._id}
+                            image = {post.image}
+                            caption = {post.caption}
+                            numLikes = {post.likeCount} />) : ("")} </>   
+                    ))}
                 </section>
                 <section id = "col2" className = "colum">
-
+                    {posts.map((post, id)=>(<>{id%4 === 1 ? (
+                    <Posting key={post._id}
+                            _id={post._id}
+                            image = {post.image}
+                            caption = {post.caption}
+                            numLikes = {post.likeCount} />) : ("")} </>   
+                    ))}
                 </section>
                 <section id = "col3" className = "colum">
-
+                    {posts.map((post, id)=>(<>{id%4 === 2 ? (
+                    <Posting key={post._id}
+                            _id={post._id}
+                            image = {post.image}
+                            caption = {post.caption}
+                            numLikes = {post.likeCount} />) : ("")} </>   
+                    ))}
                 </section>
                 <section id = "col0" className = "colum">
-
+                    {posts.map((post, id)=>(<>{id%4 === 3 ? (
+                        <Posting key={post._id}
+                                _id={post._id}
+                                image = {post.image}
+                                caption = {post.caption}
+                                numLikes = {post.likeCount} />) : ("")} </>   
+                        ))}
                 </section>
+
             </section>
         </div>
     )

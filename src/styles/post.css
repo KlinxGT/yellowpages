@@ -30,15 +30,21 @@
     text-align: center;
 }
 
+label {
+    color: var(--support-color) ;
+    font-size: large;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+}
+
 #more {
     width: 90%;
     margin: 5px auto;
     height: fit-content;
     min-height: 32vh;
     background-color: #443325;
-    color: var(--support-color) ;
     padding-bottom: 5px;
-
 }
 
 #more section {
@@ -47,12 +53,6 @@
     margin: auto;
 }
 
-#more label {
-    font-size: large;
-    font-weight: bold;
-    display: block;
-    margin: auto;
-}
 
 #description, #tags {
     height: 35%;
@@ -98,7 +98,7 @@
     color: var(--nav-color);
 }
 
-@media only screen and (min-width:800px) {
+@media only screen and (min-width:750px) {
     #img {
         max-width: 80%;
     }
