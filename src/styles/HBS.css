@@ -72,7 +72,7 @@
     background-color: var(--chocolate);
     color: var(--support-color);
 }
-
+/*
 #edit {
     width: 80%;
     height: 100%;
@@ -89,6 +89,7 @@
     position: sticky;
     top:30%;
 }
+*/
 @media only screen and (min-width: 750px) {
 
     #images {

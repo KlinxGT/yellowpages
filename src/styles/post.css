@@ -54,11 +54,12 @@ label {
 }
 
 
-#description, #tags {
+#extraInfo, #tags {
     height: 35%;
     width: 80%;
     background-color: var(--support-color);
     border-style: groove;
+
 }
 
 #caption {
@@ -67,7 +68,7 @@ label {
     background-color: var(--support-color);
 }
 
-#description, #tags {
+#extraInfo, #tags {
     min-height: 50px;
     height: 30%;
 }

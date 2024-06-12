@@ -1,22 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import "../styles/HBS.css";
-//import myData from "../JSON/jason.json";
 import axios from 'axios';
 import Posting from "../components/posting";
 
 const HBS = () => {
-
-    //Gets JSON
-    /*
-    const getPost = async() => {
-        try {
-            return(myData);
-        }
-        catch (error) {
-            console.log(error);
-        }
-    }
-    */ 
 
     const [posts, setPosts] = useState([]);
     useEffect(() => {
@@ -24,6 +11,7 @@ const HBS = () => {
         (async () => {
           const response = await axios.get(
             "https://yellowpages-backend.onrender.com/api/posts"
+            
           );
           setPosts(response.data);
         })();
@@ -37,20 +25,15 @@ const HBS = () => {
                 <input id = "search" type = "text"></input>
             </section>
             <section id = "images">
-                <dialog id="edit" open>
-                    <form method = "dialog" id = "editor"> 
-                        <img id = "emage"/>
-                        <button>Heyoo</button>
-                    </form>
-                </dialog>
-               
                 <section id = "col1" className = "colum">
                     {posts.map((post, id)=>(<>{id%4 === 0 ? (
                     <Posting key={post._id}
                             _id={post._id}
                             image = {post.image}
                             caption = {post.caption}
-                            numLikes = {post.likeCount} />) : ("")} </>   
+                            numLikes = {post.likeCount}
+                            extraInfo = {post.extraInfo}
+                            tags = {post.tags} />) : ("")} </>   
                     ))}
                 </section>
                 <section id = "col2" className = "colum">
@@ -59,7 +42,9 @@ const HBS = () => {
                             _id={post._id}
                             image = {post.image}
                             caption = {post.caption}
-                            numLikes = {post.likeCount} />) : ("")} </>   
+                            numLikes = {post.likeCount} 
+                            extraInfo = {post.extraInfo}
+                            tags = {post.tags}/>) : ("")} </>   
                     ))}
                 </section>
                 <section id = "col3" className = "colum">
@@ -68,7 +53,9 @@ const HBS = () => {
                             _id={post._id}
                             image = {post.image}
                             caption = {post.caption}
-                            numLikes = {post.likeCount} />) : ("")} </>   
+                            numLikes = {post.likeCount}
+                            extraInfo = {post.extraInfo}
+                            tags = {post.tags} />) : ("")} </>   
                     ))}
                 </section>
                 <section id = "col0" className = "colum">
@@ -77,10 +64,12 @@ const HBS = () => {
                                 _id={post._id}
                                 image = {post.image}
                                 caption = {post.caption}
-                                numLikes = {post.likeCount} />) : ("")} </>   
+                                numLikes = {post.likeCount} 
+                                extraInfo = {post.extraInfo}
+                                tags = {post.tags}/>) : ("")} </>   
                         ))}
                 </section>
-
+               
             </section>
         </div>
     )

@@ -35,7 +35,6 @@ const Post = () => {
         
         if (response.status === 200) {
         setResult("Post Successfully Added");
-        event.target.reset(); //reset your form fields
         event.target.reset();
         //props.addHousePlan(await response.json());
         //props.closeDialog();
@@ -73,12 +72,12 @@ const Post = () => {
                         required></textarea>
                     </p>
                     <p>
-                        <label htmlFor = "description">Extra Info</label>
+                        <label htmlFor = "extraInfo">Extra Info</label>
                         <textarea 
                         type = "text" 
-                        id = "description" 
-                        name = "description"
-                        value={inputs.description || ""}
+                        id = "extraInfo" 
+                        name = "extraInfo"
+                        value={inputs.extraInfo || ""}
                         onChange = {handleChange}
                         required></textarea>
                         <label htmlFor = "tags">Tags</label>
